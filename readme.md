@@ -100,6 +100,7 @@ Pet과 Hospital 은 UserID와 외래키로 연결되어있어, 로그인한 정�
 
 메인 화면에 답변 작성이 우수한 병원들을 광고하고 있습니다. 지금은 답변에 대한 Rank 알고리즘이 없어 ChatGPT를 제외한 병원들에서 랜덤하게 보여주고 있습니다. 
 <br/>
+<br/>
 
 ### ✅ Picture, Question, Answer API
 
@@ -122,6 +123,7 @@ Question의 경우 마찬가지로 PictureID를 외래키로 가지기 때문에
 **✔ Answer**
 
 Answer의 경우 수의사의 경우에만 답변을 달 수 있도록 구현하였습니다.
+<br/>
 <br/>
 
 ### ✅ AWS 서버 배포
@@ -199,6 +201,7 @@ InceptionV3, Inception-resnetV2의 성능이 가장 좋은 것을 확인하였�
 ![ppt11](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/124108688/c7d81b7b-db1d-476b-be63-fbc7fa564a0a)
 
 ![ppt12](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/124108688/9d5f36f7-cab1-49b1-bbef-fda07efbef42)
+<br/>
 <br/>
 
 ## 👀 서비스 화면  
