@@ -1,7 +1,7 @@
 # 🐶 서비스 소개
-**반려동물 헬스케어 플랫폼 강아지킴입니다.**
+반려동물 헬스케어 플랫폼 **강아지킴**입니다.
 <br/>
-**AI 피부 진단, 온라인 상담, 이력관리, 수의사 연결 등의 서비스를 제공합니다.**
+AI 피부 진단, 온라인 상담, 이력관리, 수의사 연결 등의 서비스를 제공합니다.
 <br/>
 <br/>
 ![11조  3기 11조 소개 이미지](https://github.com/kwakchaewon/kangazikim/assets/74225015/295deb90-e696-49c7-9122-536a71880800)
@@ -9,16 +9,18 @@
 <br/>
 
 ## 🔗 Links
-#### 소개영상 :  https://www.youtube.com/watch?v=77HRdebU-Z0&feature=youtu.be
+소개영상 :  https://www.youtube.com/watch?v=77HRdebU-Z0&feature=youtu.be
+<br/>
 <br/>
 
 ## 😊 Members
-#### 곽채원, 김민수, 박예은, 류홍규, 박지환, 이윤열, 이태훈
+곽채원, 김민수, 박예은, 류홍규, 박지환, 이윤열, 이태훈
+<br/>
 <br/>
 
 ## 📜 서비스 플로우
 
-🦮 **반려인 시나리오**
+### 🦮 반려인 시나리오
 
 1. 반려견의 피부 질환 의심부위를 찍고 업로드한다.
 2. 진단 결과를 AI가 판단해 알려준다.
@@ -29,7 +31,7 @@
 4. 수의사 정보란의 상담 버튼을 클릭해 전화를 통해 상담하거나 예약한다
 <br/>
 
-🏥 **수의사 시나리오**
+### 🏥 수의사 시나리오
 
 1. 회원가입 시 추가적으로 수의사 관련 정보를 입력한다.
 2. Q&A 게시판에 올라오는 질문에 대한 답변을 작성한다.
@@ -38,33 +40,31 @@
 
 ## 🛠  사용기술
 
-:disp **[Front](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project-front)** 
-
+### **Frontend**
 - Android Studio (Java)
 
-🌟 **[Backend](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project-back)**
-
-- Django
+### **Backend**
+- Django RestFramework
 - AWS (EC2, RDS, S3)
 - MySQL
 - NGINX
+<br/>
 
-## 🖥 개발 내용
+## 🖥 개발 내역
 
-**Frontend**는 **Android Studio**를 사용하여 **Android APP**을 구현했습니다.  
-**Frontend**에서 **Backend**로의 통신은 **Retrofit2**를 이용하여 구현했습니다.  
-
-**Backend**는 **Django REST Framwork** 를 사용하여 **REST API**를 구현하였고,  
-**Backend 서버**의 경우 **AWS EC2**를 사용하고, DB와 Storage를 **RDS**와 **S3**로 분리해서 구현했습니다.  
-DB는 **MySQL**을 사용했고, API 서버는 **NGINX**로 배포 하였습니다.
+### ✅ 서비스 아키텍쳐
 
 ![전체 아키텍처](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/13626f8b-9a5f-4337-9477-b857a13bda9c)
-
+- **Frontend**는 **Android Studio**를 사용하여 **Android APP**을 구현했습니다.  
+- **Frontend**에서 **Backend**로의 통신은 **Retrofit2**를 이용하여 구현했습니다.  
+- **Backend**는 **Django REST Framwork** 를 사용하여 **REST API**를 구현했습니다.<br/>
+- **Backend 서버**의 경우 **AWS EC2**를 사용하고, DB와 Storage를 **RDS**와 **S3**로 분리해서 구현했습니다.  
+- DB는 **MySQL**을 사용했고, API 서버는 **NGINX**로 배포 하였습니다.
+<br/>
 
 ### ✅ API 명세서
-
-API에 대한 내용들은 Notion에 API 명세서를 작성하여 관리했습니다. [[API 명세서 링크]](https://www.notion.so/957e66a93eee468b9ad01613f041ea0a?pvs=21)
-![api 명세서 캡처 다크모드](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/7b2391ad-112e-486f-9b08-aa2d63bf23e1)
+API에 대한 내용들은 Notion에 API 명세서를 작성하여 관리했습니다.
+<br/>
 
 ### ✅ 로그인 관련 구현
 
