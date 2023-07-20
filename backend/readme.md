@@ -1,5 +1,15 @@
 # KT AIVLE School 3기 AI Big Project 11조 Backend Repository
 
+## 💻 로컬 환경 세팅
+1. 작업할 폴더 만들기 (파일명: kangaazikim)
+2. 해당 경로에서 git clone
+3. 아나콘다 가상환경 생성: $ conda create -n djangowithandroid python=3.8
+4. 라이브러리 설치: $ pip install -r requirements.txt 
+5. DB 연동
+   - settings_params.py 에서 DATABASES 관련 설정 변경
+   - 데이터베이스 생성: CREATE DATABASE backend default CHARACTER SET UTF8;
+6 settings_params.py KEY 설정: SECRET_KEY, DATABASES, openai_apiKey key 값 삽입
+
 ## 🌟 환경 세팅 
 ec2에서 python venv를 사용할 것으로 venv로 가상환경을 세팅 
 
