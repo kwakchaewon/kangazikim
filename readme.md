@@ -71,11 +71,11 @@ API에 대한 내용들은 Notion에 API 명세서를 작성하여 관리했습�
 
 Django REST Auth를 활용하여 기본적인 회원가입, 로그인, 로그아웃 등을 구현했습니다.
 
-아래와 같은 Field들을 추가하여 Custom User를 구현했습니다.
+Django 에서 제공하는 AbstractUser을 상속받아 다음 Field들을 추가/변경하여 User 모델을 구현했습니다.
 
-- Email을 로그인 시 사용 (기본은 Username)
-- 수의사 여부 Field 추가
-- 프로필 이미지 Field 추가 : Default로 pydenticon 이미지 사용
+- 로그인시 id값으로 Username이 아닌 Email 사용
+- 필드 추가: 프로필 이미지 (profile_img), 수의사 여부 (is_vet)
+- property 추가: 아바타 (프로필 사진 없을 시 pydenticon 적용)
 
 ✔️ **JWT Token**
 
@@ -83,18 +83,23 @@ Django REST Auth를 활용하여 기본적인 회원가입, 로그인, 로그아
 
 ✔️ **기타 User 관련 API**
 
-회원가입 시 Email 중복 확인을 하는 API와, 비밀번호를 까먹었을 때 해당 아이디로 Email을 전송하여 비밀번호를 초기화할 수 있는 API를 구현했습니다. Front에서와 마찬가지로 비밀번호는 `SHA256` 암호화를 수행한 후 전달되도록 구현했습니다.
+회원가입 시 Email 중복 확인을 하는 API와, 비밀번호를 잊었을 때 Email을 전송하여 비밀번호를 초기화할 수 있는 API를 구현했습니다.
+Front에서와 마찬가지로 비밀번호는 `SHA256` 암호화를 수행한 후 전달되도록 구현했습니다.
 
 |비밀번호 초기화 메일|비밀번호 초기화 화면|
 |---|---|
 |![image](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/ea45c4c8-2a2a-4c51-bb27-4bf21f1f8c64)|![image](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/2899f85b-1dea-4f25-b664-033b187f4f4f)|
 <br/>
 
-### ✅ Pet, Hospital API
+### ✅ Pet API
+Pet 테이블은 User 와 외래키로 연결되어 있습니다.
+로그인 된 유저의 반려동물 정보를 조회 및 등록하는 Pet API를 구현했습니다.
+<br/>
 
-User 별로 Pet 정보를 등록하는 API와, 수의사일 경우 Hospital 정보를 등록하는 API를 구현했습니다.
+### ✅ Hospital API
 
-Pet과 Hospital 은 UserID와 외래키로 연결되어있어, 로그인한 정보를 바탕으로 데이터 생성 시 자동으로 UserID를 가져오도록 구현했습니다.
+수의사일 경우 병원 정보를 등록하는 Hospital API를 구현했습니다.
+Hospital 은 UserID와 외래키로 연결되어있어, 로그인한 정보를 바탕으로 데이터 생성 시 자동으로 UserID를 가져오도록 구현했습니다.
 
 **✔ Hospital 광고 API**
 
