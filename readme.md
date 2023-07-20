@@ -118,18 +118,22 @@ Question 테이블은 User 테이블, Picture 테이블과 외래키로 연결�
 permission_classes 를 통해 조회는 누구나 가능하지만 쓰기, 수정, 삭제 기능은 유저 본인만 가능하도록 권한을 제한했습니다.<br/>
 
 **✔ 비동기적 gpt 답변 등록**
+
 Question 등록 시, 질문 내용을 기반으로 Chatgpt 답변이 자동으로 생성됩니다.<br/>
 ChatGPT 응답은 openai_api를 사용했습니다.<br/>
 Chatgpt 응답은 10초 이상 걸리기 때문에 이를 줄이기 위해 gpt 답변 과정은 쓰레드를 통해 비동기적으로 구현했습니다.<br/>
 
 **✔ 답변 갯수 조회**
+
 Serializer 집계 함수를 통해 질문별 답변 갯수를 조회하도록 조회했습니다.<br/>
 
 **✔ Pagenation 적용**
+
 PageNumberPagination을 상속받아 기본적인 Pagenation을 적용했습니다.<br/>
 
 **✔ 검색 기능 적용**
-제목과 내용을 기반으로 검색할 수 있도록 구현했습니다.<br/>
+
+제목과 내용을 기반으로 검색할 수 있도록 구현했습니다.<br/><br/>
 
 
 ### ✅ Answer API
@@ -140,7 +144,7 @@ Answer 테이블은 User, Question 테이블과 외래키로 연결되어 있습
 
 ### ✅ AWS 서버 배포
 AWS 서버 배포는 uwsgi와 Nginx를 통해 배포했습니다. Nginx를 통해 배포했음에도 AI모델이 돌아가고 동시에 다른 API 요청이 들어오면 서버가 죽는 경우가 발생하여, uwsgi 서버 부하 관련 설정을 변경하여 서버가 안정적으로 돌아갈 수 있도록 했습니다.
-<br/>
+<br/><br/>
 
 ### ✅ 아키텍처, ERD, Service Flow, UI/UX 흐름도 
 
