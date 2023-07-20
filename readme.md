@@ -65,6 +65,7 @@ AI 피부 진단, 온라인 상담, 이력관리, 수의사 연결 등의 서비
 ### ✅ API 명세서
 API에 대한 내용들은 Notion에 API 명세서를 작성하여 관리했습니다.
 <br/>
+<br/>
 
 ### ✅ 로그인 관련 구현
 
@@ -87,7 +88,7 @@ Django REST Auth를 활용하여 기본적인 회원가입, 로그인, 로그아
 |비밀번호 초기화 메일|비밀번호 초기화 화면|
 |---|---|
 |![image](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/ea45c4c8-2a2a-4c51-bb27-4bf21f1f8c64)|![image](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/2899f85b-1dea-4f25-b664-033b187f4f4f)|
-
+<br/>
 
 ### ✅ Pet, Hospital API
 
@@ -98,6 +99,7 @@ Pet과 Hospital 은 UserID와 외래키로 연결되어있어, 로그인한 정�
 **✔ Hospital 광고 API**
 
 메인 화면에 답변 작성이 우수한 병원들을 광고하고 있습니다. 지금은 답변에 대한 Rank 알고리즘이 없어 ChatGPT를 제외한 병원들에서 랜덤하게 보여주고 있습니다. 
+<br/>
 
 ### ✅ Picture, Question, Answer API
 
@@ -120,6 +122,7 @@ Question의 경우 마찬가지로 PictureID를 외래키로 가지기 때문에
 **✔ Answer**
 
 Answer의 경우 수의사의 경우에만 답변을 달 수 있도록 구현하였습니다.
+<br/>
 
 ### ✅ AWS 서버 배포
 
@@ -131,7 +134,7 @@ AWS 서버 배포는 uwsgi와 Nginx를 통해 배포했습니다. Nginx를 통�
 |아키텍처|ERD|Service Flow|UI/UX 흐름도|
 |---|---|---|---|
 |![architecture](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/30362867/44f10a37-b3cb-4b75-b071-91c8d7165565)|![erd](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/b04ee526-a2e9-48a4-86de-5c6ad67e061d)|![서비스 플로우](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/4c5aac06-ddcb-4ef2-bc6b-1dc822403556)|![UI/UX](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/30362867/62fc0f89-6c0c-4285-867f-97055b0bc3c4)|
-
+<br/>
 
 ### ✅ AI
 무증상 및 6가지의 피부 질환을 포함하여 7 Class로 분류하는 Flow를 가지고 있습니다.
@@ -196,10 +199,7 @@ InceptionV3, Inception-resnetV2의 성능이 가장 좋은 것을 확인하였�
 ![ppt11](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/124108688/c7d81b7b-db1d-476b-be63-fbc7fa564a0a)
 
 ![ppt12](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/124108688/9d5f36f7-cab1-49b1-bbef-fda07efbef42)
-
-
-
-
+<br/>
 
 ## 👀 서비스 화면  
 
