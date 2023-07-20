@@ -4,7 +4,7 @@
 AI 피부 진단, 온라인 상담, 이력관리, 수의사 연결 등의 서비스를 제공합니다.
 <br/>
 <br/>
-![11조  3기 11조 소개 이미지](https://github.com/kwakchaewon/kangazikim/assets/74225015/295deb90-e696-49c7-9122-536a71880800)
+![11조  3기 11조 소개 이미지](https://github.com/kwakchaewon/kangazikim/assets/74225015/7326aa89-8b94-48a3-91bc-d6f2388c371d)
 <br/>
 <br/>
 
