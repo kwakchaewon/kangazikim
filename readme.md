@@ -94,8 +94,9 @@ Front에서와 마찬가지로 비밀번호는 `SHA256` 암호화를 수행한 �
 
 
 ### ✅ Hospital API
-수의사일 경우 병원 정보를 등록하는 Hospital API를 구현.<br/>
-Hospital 은 UserID와 외래키로 연결되어있어, 로그인한 정보를 바탕으로 데이터 생성 시 자동으로 UserID를 가져오도록 구현.
+- 수의사일 경우 병원 정보를 등록하는 Hospital API를 구현.<br/>
+- Hospital 은 UserID와 외래키로 연결.
+- 로그인 정보를 바탕으로 데이터 생성 시 자동으로 UserID를 가져오도록 구현.
 
 **✔ Hospital 광고 API**
 
@@ -106,19 +107,19 @@ Hospital 은 UserID와 외래키로 연결되어있어, 로그인한 정보를 �
 ### ✅ Picture API
 - 환부 사진과 그에 대한 AI 진단 결과를 등록 및 조회하는 Picture API 구현.<br/>
 - Picture 테이블은 User 테이블, Pet 테이블과 외래키로 연결.<br/>
-- 환부 사진 등록 시 PetID 를 통해 자신의 반려견을 등록하고 결과 확인 시 자신의 반려견 별로 조회할 수 있도록 구현.<br/>
+- 환부 사진 등록 시 PetID 를 통해 자신의 반려견을 등록하고 및 자신의 반려견 별로 결과를 조회 할수 있도록 구현.<br/>
 - permission_classes 를 통해 작성자 외에 쓰기, 수정, 삭제 못하도록 권한 제한<br/><br/>
 
 ### ✅ Question API
-- 진단 결과에 대한 추가적인 상담글을 등록할 수 있도록 Question API 를 구현했습니다.<br/>
-- Question 테이블은 User 테이블, Picture 테이블과 외래키로 연결되어 있습니다.<br/>
-- permission_classes 를 통해 조회는 누구나 가능하지만 쓰기, 수정, 삭제 기능은 유저 본인만 가능하도록 권한을 제한했습니다.<br/>
+- 진단 결과에 대한 추가적인 상담글을 등록할 수 있도록 Question API 를 구현.<br/>
+- Question 테이블은 User 테이블, Picture 테이블과 외래키로 연결.<br/>
+- permission_classes 를 통해 쓰기, 수정, 삭제 기능은 유저 본인만 가능하도록 권한을 제한.<br/>
 
 **✔ 비동기적 gpt 답변 등록**
 
-- Question 등록 시, 질문 내용을 기반으로 Chatgpt 답변이 자동으로 생성.<br/>
-- ChatGPT 응답은 openai_api 사용.<br/>
-- 10 초 이상의 지연시간을 줄이기 위해 자동 답변 생성 과정은 쓰레드를 통해 비동기적으로 구현.<br/>
+- Question 등록 시, 질문 내용을 기반으로 Chatgpt 답변이 자동으로 생성합니다..<br/>
+- ChatGPT 응답은 openai_api 사용했습니다.<br/>
+- 10 초 이상의 지연시간을 줄이기 위해 자동 답변 생성 과정은 쓰레드를 통해 비동기적으로 구현했습니다.<br/>
 
 **✔ 답변 갯수 조회**
 
@@ -141,7 +142,7 @@ PageNumberPagination을 상속받아 기본적인 Pagenation을 적용했습니�
 
 ### ✅ AWS 서버 배포
 - AWS 서버 배포는 uwsgi와 Nginx를 통해 배포.
-- Nginx를 통해 배포했음에도 AI모델이 돌아가면서 동시에 다른 API 요청이 들어오면 서버가 다운되는 문제 발생
+- Nginx 배포 시, AI모델이 돌아가면서 동시에 다른 API 요청이 들어오면 서버가 다운되는 문제 발생
 - uwsgi 서버 부하 관련 설정을 변경하여 서버가 안정적으로 돌아갈 수 있도록 했습니다.
 <br/><br/>
 
@@ -153,7 +154,7 @@ PageNumberPagination을 상속받아 기본적인 Pagenation을 적용했습니�
 <br/>
 
 ### ✅ AI
-무증상 및 6가지의 피부 질환을 포함하여 7 Class로 분류하는 Flow를 가지고 있습니다.
+- 무증상 및 6가지의 피부 질환을 포함하여 7 Class로 분류
 
 ![ppt4](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/124108688/50c97e0d-654f-4874-816f-b8a67f0dee26)
 
