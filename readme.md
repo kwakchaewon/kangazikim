@@ -55,11 +55,11 @@ AI 피부 진단, 온라인 상담, 이력관리, 수의사 연결 등의 서비
 ### ✅ 서비스 아키텍쳐
 
 ![전체 아키텍처](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/13626f8b-9a5f-4337-9477-b857a13bda9c)
-- **Frontend**는 **Android Studio**를 사용하여 **Android APP**을 구현했습니다.  
-- **Frontend**에서 **Backend**로의 통신은 **Retrofit2**를 이용하여 구현했습니다.  
-- **Backend**는 **Django REST Framwork** 를 사용하여 **REST API**를 구현했습니다.<br/>
-- **Backend 서버**의 경우 **AWS EC2**를 사용하고, DB와 Storage를 **RDS**와 **S3**로 분리해서 구현했습니다.  
-- DB는 **MySQL**을 사용했고, API 서버는 **NGINX**로 배포 하였습니다.
+- **Frontend**는 **Android Studio**를 사용하여 **Android APP**을 구현.
+- **Frontend**에서 **Backend**로의 통신은 **Retrofit2**로 구현.
+- **Backend**는 **Django REST Framwork** 를 사용하여 **REST API**를 구현.<br/>
+- **Backend 서버**의 경우 **AWS EC2**를 사용하고, DB와 Storage를 **RDS**와 **S3**로 분리.
+- DB는 **MySQL**을 사용했고, API 서버는 **NGINX**로 배포.
 <br/>
 
 ### ✅ API 명세서
@@ -69,36 +69,33 @@ API에 대한 내용들은 Notion에 API 명세서를 작성하여 관리했습�
 
 ### ✅ 로그인 관련 구현
 
-Django REST Auth를 활용하여 기본적인 회원가입, 로그인, 로그아웃 등을 구현했습니다.
-
-Django 에서 제공하는 AbstractUser을 상속받아 다음 Field들을 추가/변경하여 User 모델을 구현했습니다.
-
+- Django REST Auth를 활용하여 기본적인 회원가입, 로그인, 로그아웃 등을 구현
+- Django 에서 제공하는 AbstractUser을 상속받아 다음 Field들을 추가/변경하여 User 모델 구현
 - 로그인시 id값으로 Username이 아닌 Email 사용
 - 필드 추가: 프로필 이미지 (profile_img), 수의사 여부 (is_vet)
 - property 추가: 아바타 (프로필 사진 없을 시 pydenticon 적용)
 
 ✔️ **JWT Token**
 
-로그인할 때에는 `AccessToken` 과 `RefreshToken` 을 발급해 해당 토큰으로 사용자 정보를 확인할 수 있도록 구현했습니다.
+로그인할 때에는 `AccessToken` 과 `RefreshToken` 을 발급하여 사용자 정보를 확인.
 
 ✔️ **기타 User 관련 API**
 
-회원가입 시 Email 중복 확인을 하는 API와, 비밀번호를 잊었을 때 Email을 전송하여 비밀번호를 초기화할 수 있는 API를 구현했습니다.
-Front에서와 마찬가지로 비밀번호는 `SHA256` 암호화를 수행한 후 전달되도록 구현했습니다.
-
+회원가입 시 Email 중복 확인을 하는 API와, 비밀번호를 잊었을 때 Email을 전송하는 비밀번호를 초기화 API를 구현.
+Front에서와 마찬가지로 비밀번호는 `SHA256` 암호화를 수행한 후 전달되도록 구현.
 |비밀번호 초기화 메일|비밀번호 초기화 화면|
 |---|---|
 |![image](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/ea45c4c8-2a2a-4c51-bb27-4bf21f1f8c64)|![image](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/2899f85b-1dea-4f25-b664-033b187f4f4f)|
 <br/>
 
 ### ✅ Pet API
-로그인 된 유저의 반려동물 정보를 조회 및 등록하는 Pet API를 구현했습니다.<br/>
-Pet 테이블은 User 와 외래키로 연결되어 있습니다.<br/><br/>
+- 로그인 된 유저의 반려동물 정보를 조회 및 등록하는 Pet API를 구현.<br/>
+- Pet 테이블은 User 와 외래키로 연결.<br/><br/>
 
 
 ### ✅ Hospital API
-수의사일 경우 병원 정보를 등록하는 Hospital API를 구현했습니다.
-Hospital 은 UserID와 외래키로 연결되어있어, 로그인한 정보를 바탕으로 데이터 생성 시 자동으로 UserID를 가져오도록 구현했습니다.
+수의사일 경우 병원 정보를 등록하는 Hospital API를 구현.<br/>
+Hospital 은 UserID와 외래키로 연결되어있어, 로그인한 정보를 바탕으로 데이터 생성 시 자동으로 UserID를 가져오도록 구현.
 
 **✔ Hospital 광고 API**
 
@@ -107,21 +104,21 @@ Hospital 은 UserID와 외래키로 연결되어있어, 로그인한 정보를 �
 
 
 ### ✅ Picture API
-환부 사진과 그에 대한 AI 진단 결과를 등록 및 조회하는 Picture API를 구현했습니다.<br/>
-Picture 테이블은 User 테이블, Pet 테이블과 외래키로 연결되어 있습니다.<br/>
-환부 사진 등록 시 PetID 를 통해 자신의 반려견을 등록하고 결과 확인 시 자신의 반려견 별로 조회할 수 있도록 구현했습니다.<br/>
-permission_classes 를 통해 조회는 누구나 가능하지만 쓰기, 수정, 삭제 기능은 유저 본인만 가능하도록 권한을 제한했습니다.<br/><br/>
+- 환부 사진과 그에 대한 AI 진단 결과를 등록 및 조회하는 Picture API 구현.<br/>
+- Picture 테이블은 User 테이블, Pet 테이블과 외래키로 연결.<br/>
+- 환부 사진 등록 시 PetID 를 통해 자신의 반려견을 등록하고 결과 확인 시 자신의 반려견 별로 조회할 수 있도록 구현.<br/>
+- permission_classes 를 통해 작성자 외에 쓰기, 수정, 삭제 못하도록 권한 제한<br/><br/>
 
 ### ✅ Question API
-진단 결과에 대한 추가적인 상담글을 등록할 수 있도록 Question API 를 구현했습니다.<br/>
-Question 테이블은 User 테이블, Picture 테이블과 외래키로 연결되어 있습니다.<br/>
-permission_classes 를 통해 조회는 누구나 가능하지만 쓰기, 수정, 삭제 기능은 유저 본인만 가능하도록 권한을 제한했습니다.<br/>
+- 진단 결과에 대한 추가적인 상담글을 등록할 수 있도록 Question API 를 구현했습니다.<br/>
+- Question 테이블은 User 테이블, Picture 테이블과 외래키로 연결되어 있습니다.<br/>
+- permission_classes 를 통해 조회는 누구나 가능하지만 쓰기, 수정, 삭제 기능은 유저 본인만 가능하도록 권한을 제한했습니다.<br/>
 
 **✔ 비동기적 gpt 답변 등록**
 
-Question 등록 시, 질문 내용을 기반으로 Chatgpt 답변이 자동으로 생성됩니다.<br/>
-ChatGPT 응답은 openai_api를 사용했습니다.<br/>
-Chatgpt 응답은 10초 이상 걸리기 때문에 이를 줄이기 위해 gpt 답변 과정은 쓰레드를 통해 비동기적으로 구현했습니다.<br/>
+- Question 등록 시, 질문 내용을 기반으로 Chatgpt 답변이 자동으로 생성.<br/>
+- ChatGPT 응답은 openai_api 사용.<br/>
+- 10 초 이상의 지연시간을 줄이기 위해 자동 답변 생성 과정은 쓰레드를 통해 비동기적으로 구현.<br/>
 
 **✔ 답변 갯수 조회**
 
@@ -137,13 +134,15 @@ PageNumberPagination을 상속받아 기본적인 Pagenation을 적용했습니�
 
 
 ### ✅ Answer API
-상담글에 대한 수의사와 ChatGpt의 답변을 받을 수 있도록 Answer API 를 구현했습니다.<br/>
-Answer 테이블은 User, Question 테이블과 외래키로 연결되어 있습니다.<br/>
-'질문에 대한 답변' 이라는 성격에 맞게 API path를 "question/<questionid>/answer" 로 설정했습니다. <br/>
-수의사일 경우에만 답변을 달 수 있도록 권한을 설정했습니다.<br/><br/>
+- 상담글에 대한 수의사와 ChatGpt의 답변을 받을 수 있도록 Answer API 를 구현<br/>
+- Answer 테이블은 User, Question 테이블과 외래키로 연결.<br/>
+- '질문에 대한 답변' 이라는 성격에 맞게 API path를 "question/<questionid>/answer" 로 설정. <br/>
+- 수의사일 경우에만 답변을 달 수 있도록 권한 제한.<br/><br/>
 
 ### ✅ AWS 서버 배포
-AWS 서버 배포는 uwsgi와 Nginx를 통해 배포했습니다. Nginx를 통해 배포했음에도 AI모델이 돌아가고 동시에 다른 API 요청이 들어오면 서버가 죽는 경우가 발생하여, uwsgi 서버 부하 관련 설정을 변경하여 서버가 안정적으로 돌아갈 수 있도록 했습니다.
+- AWS 서버 배포는 uwsgi와 Nginx를 통해 배포.
+- Nginx를 통해 배포했음에도 AI모델이 돌아가면서 동시에 다른 API 요청이 들어오면 서버가 다운되는 문제 발생
+- uwsgi 서버 부하 관련 설정을 변경하여 서버가 안정적으로 돌아갈 수 있도록 했습니다.
 <br/><br/>
 
 ### ✅ 아키텍처, ERD, Service Flow, UI/UX 흐름도 
