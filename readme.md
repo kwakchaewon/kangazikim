@@ -204,7 +204,7 @@ unet에서는 픽셀 주위의 local region(패치)를 입력으로 각 픽셀�
 
 - 사전학습 분류모델 검토
 
-VGG16, MobileNetV3, EfficientNet-B0, Resnet-50, InceptionV3, Inception-resnetV2모델을 검토하였습니다.<br>
+VGG16, MobileNetV3, EfficientNet-B0, Resnet-50, InceptionV3, Inception-resnetV2모델 검토<br>
 ![ppt8](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/124108688/32346055-04b9-4afb-a377-f5b620610f2a)
 
 InceptionV3, Inception-resnetV2의 성능이 가장 좋은 것을 확인.<br>
