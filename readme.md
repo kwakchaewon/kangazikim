@@ -134,15 +134,15 @@ API에 대한 내용들은 Notion에 API 명세서를 작성하여 관리했습�
 
 **✔ 답변 갯수 조회**
 
-Serializer 집계 함수 답변 갯수를 조회<br/>
+- Serializer 집계 함수 답변 갯수를 조회<br/>
 
 **✔ Pagenation 적용**
 
-PageNumberPagination 기반 기본적인 Pagenation을 적용<br/>
+- PageNumberPagination 기반 기본적인 Pagenation을 적용<br/>
 
 **✔ 검색 기능 적용**
 
-제목과 내용을 기반 검색<br/><br/>
+- 제목과 내용을 기반 검색<br/><br/>
 
 
 ### ✅ Answer API
@@ -180,7 +180,7 @@ PageNumberPagination 기반 기본적인 Pagenation을 적용<br/>
 
 
 ✔️ **모델**  
-모델은 pretrained InceptionV3를 사용.<br>
+- pretrained InceptionV3 사용.<br>
 
 
 **✔ 모델 선정과정**
@@ -188,8 +188,8 @@ PageNumberPagination 기반 기본적인 Pagenation을 적용<br/>
 
 ![ppt3](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/124108688/bdca5b23-8c5f-4a9c-9c15-505effc30062)
 
-마스킹 이미지가 작은 경우 환부로 인식하기 어려운 문제 발생<br>
-unet에서는 픽셀 주위의 local region(패치)를 입력으로 각 픽셀의 label을 예측하는데, 패치가 작아 환부에 대한 localization 성능은 향상되었으나(98.81%의 accuracy), 네트워크는 매우 작은 context만 보게 되어 context 파악 성능이 매우 떨어지는 것을 확인 <br>
+- 마스킹 이미지가 작은 경우 환부로 인식하기 어려운 문제 발생<br>
+- unet에서는 픽셀 주위의 local region(패치)를 입력으로 각 픽셀의 label을 예측하는데, 패치가 작아 환부에 대한 localization 성능은 향상되었으나(98.81%의 accuracy), 네트워크는 매우 작은 context만 보게 되어 context 파악 성능이 매우 떨어지는 것을 확인 <br>
 (Unet의 경우 localization accuracy와 context(sementaic information) 사이는 trade off 관계)
 
 
