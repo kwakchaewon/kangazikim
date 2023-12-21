@@ -8,15 +8,43 @@ AI 피부 진단, 온라인 상담, 이력관리, 수의사 연결 등의 서비
 <br/>
 <br/>
 
+## 🛠  사용기술
+
+### **Frontend**
+- Android Studio (Java)
+
+### **Backend**
+- Django Rest Framework (Python)
+
+### **Infra**
+- Server: AWS EC2(uwsg & Nginx)
+- DB: AWS RDS (MYSQL)
+- Storage: AWS S3
+<br/>
+
 ## 🔗 Links
 소개영상 :  https://www.youtube.com/watch?v=77HRdebU-Z0&feature=youtu.be
 <br/>
 <br/>
 
+# ✍️ 담당 업무
+1. DB 설계 및 구현
+2. AWS 서버 배포:  EC2 (uWSGI, Nginx), RDS (MYSQL), S3 기반
+3. Django RestFramework 기반 API 구현<br/>
+   3-1. Django Rest auth, jwt 토큰 기반 로그인, 회원가입 구현<br/>
+   3-2. Pydenticon 기본 프로필 이미지 적용<br/>
+   3-3. Chat gpt api 자동 답변 기능 최적화: 쓰레딩 모듈 적용, 지연시간 10초 감소<br/>
+   3-4. Question, Answer, Pet, Hostpital CRUD API 구현<br/>
+4. 관리자 페이지 커스터마이징
+<br/>
+<br/>
+
+<!--
 ## 😊 Members
 곽채원, 김민수, 박예은, 류홍규, 박지환, 이윤열, 이태훈
 <br/>
 <br/>
+-->
 
 ## 📜 서비스 플로우
 
@@ -37,32 +65,27 @@ AI 피부 진단, 온라인 상담, 이력관리, 수의사 연결 등의 서비
 3. 답변 개수이 많을수록 메인 페이지 광고에 더 많이 노출된다.
 <br/>
 
-## 🛠  사용기술
-
-### **Frontend**
-- Android Studio (Java)
-
-### **Backend**
-- Django RestFramework
-- AWS (EC2, RDS, S3)
-- MySQL
-- NGINX
-<br/>
-
-## 🖥 개발 내역
+## 🖥 주요 산출물
 
 ### ✅ 서비스 아키텍쳐
 
 ![전체 아키텍처](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/13626f8b-9a5f-4337-9477-b857a13bda9c)
+<!--
 - **Frontend**는 **Android Studio**를 사용하여 **Android APP**을 구현.
 - **Frontend**에서 **Backend**로의 통신은 **Retrofit2**로 구현.
 - **Backend**는 **Django REST Framwork** 를 사용하여 **REST API**를 구현.<br/>
 - **Backend 서버**의 경우 **AWS EC2**를 사용하고, DB와 Storage를 **RDS**와 **S3**로 분리.
 - DB는 **MySQL**을 사용했고, API 서버는 **NGINX**로 배포.
-<br/>
+-->
 
+### ✅ ERD
+### ✅ 서비스 플로우
+### ✅ UI/UX 설계
+
+<!--
 ### ✅ API 명세서
 API에 대한 내용들은 Notion에 API 명세서를 작성하여 관리했습니다.
+-->
 <br/>
 <br/>
 
