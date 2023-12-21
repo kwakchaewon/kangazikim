@@ -252,7 +252,7 @@ InceptionV3, Inception-resnetV2의 성능이 가장 좋은 것을 확인.<br>
 로그인/회원가입 성공 시, 메인화면으로 이동<br>
 답변을 많이 한 병원들 중 하나가 하단에 노출<br>
 설문조사 버튼 클릭 시, 구글폼으로 이동<br>
-전화상담 버튼 클릭 시, 휴대전화의 전화 화면으로 이동 및 병원 번호 다이얼 표기br><br>
+전화상담 버튼 클릭 시, 휴대전화의 전화 화면으로 이동 및 병원 번호 다이얼 표기<br>
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/456ecb12-efa8-443e-b28e-6ec6f56494cd" width="200"/>&nbsp;&nbsp;
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/01d5c984-8e11-467d-9e98-ffb9a0f3095b" width="200"/>&nbsp;&nbsp;
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/48c2b3cd-8f2c-4fdc-b6e1-ee0979f2198c" width="200"/><br>
