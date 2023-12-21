@@ -1,4 +1,4 @@
-# 🐶 서비스 소개
+## 🐶 서비스 소개
 반려동물 헬스케어 플랫폼 **강아지킴** ([소개영상](https://www.youtube.com/watch?v=77HRdebU-Z0&feature=youtu.be)) 입니다.
 <br/>
 AI 피부 진단, 온라인 상담, 이력관리, 수의사 연결 등의 서비스를 제공합니다.
@@ -37,7 +37,7 @@ AI 피부 진단, 온라인 상담, 이력관리, 수의사 연결 등의 서비
 - Storage: AWS S3
 <br/>
 
-# ✍️ 담당 업무
+## ✍️ 담당 업무
 1. DB 설계 및 구현
 2. AWS 서버 배포:  EC2 (uWSGI, Nginx), RDS (MYSQL), S3 기반
 3. Django RestFramework 기반 API 구현<br/>
