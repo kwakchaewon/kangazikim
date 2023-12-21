@@ -233,55 +233,54 @@ InceptionV3, Inception-resnetV2의 성능이 가장 좋은 것을 확인.<br>
 ## 👀 서비스 화면
 
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/4b99a6be-bd6e-4aab-8190-e6d3ca9404c4" width="200"/><br>
-어플리케이션을 설치하면 위와 같은 아이콘이 나타납니다.<br><br>
+어플리케이션을 설치<br><br>
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/453031bb-dfc6-40e4-bbfc-7a384078aa4a" width="200"/>&nbsp;&nbsp;
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/3823bb12-4e47-4cc7-be66-c7b934c31d60" width="200"/><br>
-아이콘을 눌러 실행하면 로딩화면을 거치고 로그인 화면으로 이동합니다.<br><br>
+아이콘을 눌러 실행 후 로그인 화면으로 이동<br><br>
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/6831d554-d51a-408c-b547-580ba1814a9e" width="200"/>&nbsp;&nbsp;
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/f68bbec1-ca2a-4ad0-9c78-f1c211e31c3d" width="200"/>&nbsp;&nbsp;
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/cb6b7305-88ff-44b7-b899-0cdc5cbc0156" width="200"/><br>
-로그인 화면에서 회원가입 버튼을 누르면 위와 같은 화면으로 이동합니다. <br>
-수의사 버튼을 누르면 병원 정보를 입력할 수 있는 화면이 나타나고, <br>
-약관 확인하기 문구를 클릭하면 약관을 확인 할 수 있는 화면으로 이동니다.<br><br>
+회원가입 버튼 클릭 <br>
+수의사 버튼 클릭 시, 병원 정보 입력 가능 <br>
+약관 확인하기 문구 클릭 후 약관 확인<br><br>
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/c2b0865f-a1df-4cfd-a43f-cd71d4dc6ff0" width="200"/>&nbsp;&nbsp;
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/c827ef3c-9d2b-4237-8ada-5f2629fcc256" width="200"/><br>
-로그인 화면에서 비밀번호 초기화 문구를 클릭하면 이메일을 입력할 수 있는 화면이 나타나고 <br>
-초기화 이메일 보내기 버튼을 누르면 위와 같은 메일을 받을 수 있습니다.<br><br>
+비밀번호 초기화 클릭 시, 이메일 입력 후 위와 같은 메일 발송<br><br>
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/e004ce20-450d-4ba0-b02a-9f17fa9225f3" width="200"/>&nbsp;&nbsp;
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/8be44c4d-68e8-4ef6-88c5-8be4fde07b02" width="200"/>&nbsp;&nbsp;
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/72ff5aee-0ddb-4725-b214-e89d2b0267d9" width="200"/><br>
-로그인이나 회원가입이 성공하면 메인화면으로 이동합니다.<br>
-답변을 많이 한 병원들 중 하나가 하단에 노출됩니다.<br>
-설문조사 버튼을 누르면 구글폼으로 이동합니다.<br>
-전화상담 버튼을 누르면 휴대전화의 전화화면으로 이동하고 병원 번호로 다이얼을 걸어둡니다.<br><br>
+로그인/회원가입 성공 시, 메인화면으로 이동<br>
+답변을 많이 한 병원들 중 하나가 하단에 노출<br>
+설문조사 버튼 클릭 시, 구글폼으로 이동합<br>
+전화상담 버튼 클릭 시, 휴대전화의 전화화면읋 이동 및 병원 번호 다이얼 표기br><br>
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/456ecb12-efa8-443e-b28e-6ec6f56494cd" width="200"/>&nbsp;&nbsp;
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/01d5c984-8e11-467d-9e98-ffb9a0f3095b" width="200"/>&nbsp;&nbsp;
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/48c2b3cd-8f2c-4fdc-b6e1-ee0979f2198c" width="200"/><br>
-메인화면에서 피부 질환 진단하기 버튼을 누르면 해당하는 동물을 선택하고 <br>
-사진을 촬영하거나 갤러리에서 선택하여 이미지를 업로드하는 화면으로 이동합니다.<br>
+메인화면에서 피부 질환 진단하기 버튼 클릭 시, 반려동물 선택 화면 <br>
+사진을 촬영 또는 갤러리에서 선택 후 이미지 업로드<br>
 첫번째 사진은 선택 전 화면, 두번째 사진은 사진촬영 버튼으로 넘어간 화면, <br>
-세번째 사진은 사진선택 버튼으로 넘어간 화면, 마지막은 선택 후 화면입니다.<br><br>
+세번째 사진은 사진선택 버튼으로 넘어간 화면, 마지막은 선택 후 화면<br><br>
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/914a38d9-9988-425b-8b5b-f8488c078c36" width="200"/>&nbsp;&nbsp;
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/77db1b3d-5f7c-4964-9262-0d9d0d958894" width="200"/>&nbsp;&nbsp;
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/de1d4abe-57b2-4bc8-b883-0ba515a472ff" width="200"/>&nbsp;&nbsp;
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/86b4fae0-4844-40a4-9e28-a6b4ed5b9e48" width="200"/>&nbsp;&nbsp;
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/899930f3-c76e-4dbe-b37b-56e48c1c67dc" width="200"/><br>
-사진을 선택한 후 사진 등록 버튼을 누르면 진단 결과를 보여주는 화면으로 이동합니다. <br>
-기다리면 첫번째 사진 처럼 AI 진단 결과를 보여주고 <br>
-진단 결과가 나온 후 더 기다리면 두번째 사진처럼 설명이 도착했다고 메시지를 보여줍니다.<br>
-이후 AI 진단 버튼을 누르면 진단 결과에 대한 GPT의 설명을 보여줍니다. <br>
-진단 결과가 나온 뒤 질문등록 버튼을 누르면 마지막 사진처럼 질문을 등록할 수있는 화면을 보여줍니다. <br><br>
+사진을 선택한 후 사진 등록 버튼 클릭 시, 진단 결과를 보여주는 화면으로 이동 <br>
+로딩 후 첫번째 사진 처럼 AI 진단 결과 표기<br>
+두번째 사진처럼 설명이 도착했다고 메시지 표기<br>
+이후 AI 진단 버튼 클릭 시, 진단 결과에 대한 GPT의 설명 표기 <br>
+진단 결과가 나온 뒤 질문 등록 버튼 클릭 시, 마지막 사진처럼 질문을 등록할 수있는 화면 표기 <br><br>
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/f22d2252-0d53-42e1-9bef-7cc96609905f" width="200"/>&nbsp;&nbsp;
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/8183778f-0e24-4c42-8e94-d3f3c7165719" width="200"/>&nbsp;&nbsp;
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/2c7b2f79-35d2-44f4-98cc-8206dbd01add" width="200"/>&nbsp;&nbsp;
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/ca14a236-b88c-48b2-a950-220d69b08c6f" width="200"/>&nbsp;&nbsp;
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/f0920683-b443-4a8d-9cf1-9ce93a1e26a1" width="200"/>&nbsp;&nbsp;<br>
-질문등록을 마치면 메인화면으로 돌아오게 됩니다.<br>
-하단 네비게이션의 질문게시판을 클릭하면 게시판화면이 나타나게됩니다.<br>
-게시물을 클릭하면 찍은 사진, AI진단결과, GPT의 설명, 질문이 보여지게됩니다.<br>
-답변 또한 하단에 달리게 되는데 우선 GPT가 진단결과와 질문을 기반으로 답변을 해주고 <br>
-추가적으로 수의사 분들이 답변을 해주실 수 있습니다.<br>
-또한 마지막 사진 처럼 게시글을 검색 할 수 있습니다.<br><br>
+질문 등록 후 메인화면<br>
+하단 네비게이션의 질문게시판 버튼 클릭 시, 게시판 화면.<br>
+게시물 클릭 시, 찍은 사진, AI진단결과, GPT의 설명, 질문 표기<br>
+하단에 GPT 진단결과와 질문을 기반으로 답변 표기 <br>
+추가적인 수의사 분들이 답변 가능<br>
+게시글을 검색 기능<br><br>
 
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/5779bca9-2236-43ff-b11d-2f87782a2374" width="200"/>&nbsp;&nbsp;
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/d7f5bb1b-8f5a-4702-9910-e4778021ff9c" width="200"/>&nbsp;&nbsp;
@@ -289,13 +288,12 @@ InceptionV3, Inception-resnetV2의 성능이 가장 좋은 것을 확인.<br>
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/230b3500-9d88-4276-aaaf-e4011de83940" width="200"/>&nbsp;&nbsp;
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/6f9ce39d-7506-41b9-9be6-4c8a9afcb963" width="200"/>&nbsp;&nbsp;<br>
 
-메인화면이나 Q&A게시판에서 하단 네비게이션의 내 정보 버튼을 누르면 첫번째 사진과 같은 화면으로 이동합니다.<br>
-해당 화면에서 프로필 사진 변경 버튼을 누르면 유저 프로필 사진을 바꿀 수 있고<br>
-플러스 모양을 눌러 내 반려동물 추가화면으로 이동하여 반려동물을 추가 할 수 있습니다.<br>
-세번째와 다섯번째 사진처럼 수정버튼을 눌러 반려동물, 병원정보 수정화면으로 이동 할 수 있습니다.<br>
-이 때 병원 정보는 일반회원이면 보이지 않습니다.<br>
-삭제 버튼, 로그아웃 문구, 회원탈퇴 문구의 경우 누르면 확인화면으로 재확인 후 기능을 수행합니다.<br><br>
+메인화면이나 Q&A게시판에서 하단 네비게이션의 내 정보 버튼 클릭 시, 첫번째 사진과 같은 화면 이동.<br>
+해당 화면의 프로필 사진 변경 버튼 클릭 시, 유저 프로필 사진 변경 가능<br>
+플러스 모양을 눌러 내 반려동물을 추가<br>
+세번째와 다섯번째 사진처럼 수정버튼 클릭 시, 반려동물, 병원정보 수정화면으로 이동.<br>
+삭제 버튼, 로그아웃 문구, 회원탈퇴 문구 클릭 시, 확인화면으로 재확인 후 기능 수행<br><br>
 
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/833bf7b7-de8a-428b-8df2-25f3e203a0db" width="200"/><br>
-내 정보 화면에서 게시글 작성 내역 문구를 누르거나 메인화면에서 나의 질문 버튼을 누르면<br>
-내가 작성한 질문글 목록을 볼 수 있고 클릭하면 QnA게시글 화면으로 이동하여 해당하는 게시글을 보여주게 됩니다.
+내 정보 화면에서 게시글 작성 내역 문구를 누르거나 메인화면에서 나의 질문 버튼 클릭 시, 내가 작성한 질문글 목록 표기 <br>
+클릭 시, QnA게시글 화면으로 이동 후 해당 게시글 상세 표기
