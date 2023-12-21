@@ -1,11 +1,26 @@
 # 🐶 서비스 소개
-반려동물 헬스케어 플랫폼 **강아지킴**입니다.
+반려동물 헬스케어 플랫폼 **강아지킴** ([소개영상](https://www.youtube.com/watch?v=77HRdebU-Z0&feature=youtu.be)) 입니다.
 <br/>
 AI 피부 진단, 온라인 상담, 이력관리, 수의사 연결 등의 서비스를 제공합니다.
 <br/>
 <br/>
 ![11조  3기 11조 소개 이미지](https://github.com/kwakchaewon/kangazikim/assets/74225015/7326aa89-8b94-48a3-91bc-d6f2388c371d)
-<br/>
+
+### 🦮 반려인
+
+1. 반려견의 피부 질환 의심부위를 찍고 업로드한다.<br/>
+2. 진단 결과를 AI가 판단해 알려준다.<br/>
+    2-1. AI가 예상한 질환에 대한 ChatGPT의 설명을 볼 수 있다.<br/>
+3. 추가적인 상담이 필요한 경우 Q&A 게시판에 질문을 올린다. <br/>
+    3-1. 질문이 작성되면 자동으로 질문에 대한 ChatGPT 답변이 작성된다.<br/>
+    3-2. 추가적으로 작성된 수의사의 답변을 확인한다.<br/>
+4. 수의사 정보란의 상담 버튼을 클릭해 전화를 통해 상담하거나 예약한다<br/>
+
+### 🏥 수의사
+
+1. 회원가입 시 추가적으로 수의사 관련 정보를 입력한다.
+2. Q&A 게시판에 올라오는 질문에 대한 답변을 작성한다.
+3. 답변 개수이 많을수록 메인 페이지 광고에 더 많이 노출된다.
 <br/>
 
 ## 🛠  사용기술
@@ -22,11 +37,6 @@ AI 피부 진단, 온라인 상담, 이력관리, 수의사 연결 등의 서비
 - Storage: AWS S3
 <br/>
 
-## 🔗 Links
-소개영상 :  https://www.youtube.com/watch?v=77HRdebU-Z0&feature=youtu.be
-<br/>
-<br/>
-
 # ✍️ 담당 업무
 1. DB 설계 및 구현
 2. AWS 서버 배포:  EC2 (uWSGI, Nginx), RDS (MYSQL), S3 기반
@@ -37,7 +47,6 @@ AI 피부 진단, 온라인 상담, 이력관리, 수의사 연결 등의 서비
    3-4. Question, Answer, Pet, Hostpital CRUD API 구현<br/>
 4. 관리자 페이지 커스터마이징
 <br/>
-<br/>
 
 <!--
 ## 😊 Members
@@ -45,27 +54,7 @@ AI 피부 진단, 온라인 상담, 이력관리, 수의사 연결 등의 서비
 <br/>
 <br/>
 -->
-
-## 📜 서비스 플로우
-
-### 🦮 반려인 시나리오
-
-1. 반려견의 피부 질환 의심부위를 찍고 업로드한다.<br/>
-2. 진단 결과를 AI가 판단해 알려준다.<br/>
-    2-1. AI가 예상한 질환에 대한 ChatGPT의 설명을 볼 수 있다.<br/>
-3. 추가적인 상담이 필요한 경우 Q&A 게시판에 질문을 올린다. <br/>
-    3-1. 질문이 작성되면 자동으로 질문에 대한 ChatGPT 답변이 작성된다.<br/>
-    3-2. 추가적으로 작성된 수의사의 답변을 확인한다.<br/>
-4. 수의사 정보란의 상담 버튼을 클릭해 전화를 통해 상담하거나 예약한다<br/>
-
-### 🏥 수의사 시나리오
-
-1. 회원가입 시 추가적으로 수의사 관련 정보를 입력한다.
-2. Q&A 게시판에 올라오는 질문에 대한 답변을 작성한다.
-3. 답변 개수이 많을수록 메인 페이지 광고에 더 많이 노출된다.
-<br/>
-
-## 🖥 주요 산출물
+## 🖥 산출물
 
 ### ✅ 서비스 아키텍쳐
 
@@ -78,18 +67,24 @@ AI 피부 진단, 온라인 상담, 이력관리, 수의사 연결 등의 서비
 - DB는 **MySQL**을 사용했고, API 서버는 **NGINX**로 배포.
 -->
 
-### ✅ ERD
-### ✅ 서비스 플로우
+### ✅ ERD 
+![ERD](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/b04ee526-a2e9-48a4-86de-5c6ad67e061d)
+
+### ✅ 서비스 플로우 
+![서비스 플로우](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/4c5aac06-ddcb-4ef2-bc6b-1dc822403556)
+
 ### ✅ UI/UX 설계
+![UI/UX 설계](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/30362867/62fc0f89-6c0c-4285-867f-97055b0bc3c4)
 
 <!--
 ### ✅ API 명세서
 API에 대한 내용들은 Notion에 API 명세서를 작성하여 관리했습니다.
 -->
 <br/>
-<br/>
 
-### ✅ 로그인 관련 구현
+
+# 💻 상세 개발 내역
+### ✅ 로그인/회원가입
 
 - Django REST Auth를 활용하여 기본적인 회원가입, 로그인, 로그아웃 등을 구현
 - Django 에서 제공하는 AbstractUser을 상속받아 다음 Field들을 추가/변경하여 User 모델 구현
@@ -168,12 +163,14 @@ PageNumberPagination을 상속받아 기본적인 Pagenation을 적용했습니�
 - uwsgi 서버 부하 관련 설정을 변경하여 서버가 안정적으로 돌아갈 수 있도록 했습니다.
 <br/><br/>
 
+<!--
 ### ✅ 아키텍처, ERD, Service Flow, UI/UX 흐름도 
 
 |아키텍처|ERD|Service Flow|UI/UX 흐름도|
 |---|---|---|---|
 |![architecture](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/30362867/44f10a37-b3cb-4b75-b071-91c8d7165565)|![erd](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/b04ee526-a2e9-48a4-86de-5c6ad67e061d)|![서비스 플로우](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/4c5aac06-ddcb-4ef2-bc6b-1dc822403556)|![UI/UX](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/30362867/62fc0f89-6c0c-4285-867f-97055b0bc3c4)|
 <br/>
+-->
 
 ### ✅ AI
 - 무증상 및 6가지의 피부 질환을 포함하여 7 Class로 분류
@@ -241,7 +238,7 @@ InceptionV3, Inception-resnetV2의 성능이 가장 좋은 것을 확인하였�
 <br/>
 <br/>
 
-## 👀 서비스 화면  
+## 👀 서비스 화면
 
 <img src="https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/4b99a6be-bd6e-4aab-8190-e6d3ca9404c4" width="200"/><br>
 어플리케이션을 설치하면 위와 같은 아이콘이 나타납니다.<br><br>
