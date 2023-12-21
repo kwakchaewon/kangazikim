@@ -85,82 +85,75 @@ API에 대한 내용들은 Notion에 API 명세서를 작성하여 관리했습�
 
 # 💻 상세 개발 내역
 ### ✅ 로그인/회원가입
-
-- Django REST Auth를 활용하여 기본적인 회원가입, 로그인, 로그아웃 등을 구현
-- Django 에서 제공하는 AbstractUser을 상속받아 다음 Field들을 추가/변경하여 User 모델 구현
-- 로그인시 id값으로 Username이 아닌 Email 사용
-- 필드 추가: 프로필 이미지 (profile_img), 수의사 여부 (is_vet)
-- property 추가: 아바타 (프로필 사진 없을 시 pydenticon 적용)
+- Django REST Auth, 를 활용하여 기본적인 회원가입, 로그인, 로그아웃 등을 구현
+- AbstractUser을 상속받아 필요 필드 추가 (profile_img, is_vet)
+- property 추가: 프로필 사진 없을 시 pydenticon 적용
 
 ✔️ **JWT Token**
-
-로그인할 때에는 `AccessToken` 과 `RefreshToken` 을 발급하여 사용자 정보를 확인.
+로그인할 때에는 `AccessToken` 과 `RefreshToken` 발급
 
 ✔️ **기타 User 관련 API**
+- 회원가입 시 Email 중복 확인, 비밀번호를 잊었을 때 Email을 전송하는 비밀번호 초기화 API
+- 비밀번호 `SHA256` 암호화
 
-회원가입 시 Email 중복 확인을 하는 API와, 비밀번호를 잊었을 때 Email을 전송하는 비밀번호를 초기화 API를 구현.
-Front에서와 마찬가지로 비밀번호는 `SHA256` 암호화를 수행한 후 전달되도록 구현.
 |비밀번호 초기화 메일|비밀번호 초기화 화면|
 |---|---|
 |![image](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/ea45c4c8-2a2a-4c51-bb27-4bf21f1f8c64)|![image](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/76936390/2899f85b-1dea-4f25-b664-033b187f4f4f)|
 <br/>
 
 ### ✅ Pet API
-- 로그인 된 유저의 반려동물 정보를 조회 및 등록하는 Pet API를 구현.<br/>
+- 로그인 된 유저의 반려동물 정보 조회 및 등록하는 Pet API<br/>
 - Pet 테이블은 User 와 외래키로 연결.<br/><br/>
 
 
 ### ✅ Hospital API
-- 수의사일 경우 병원 정보를 등록하는 Hospital API를 구현.<br/>
-- Hospital 은 UserID와 외래키로 연결.
-- 로그인 정보를 바탕으로 데이터 생성 시 자동으로 UserID를 가져오도록 구현.
+- 수의사일 경우, 병원 정보 등록하는 Hospital API<br/>
+- Hospital 은 UserID와 외래키로 연결.<br/>
+- 로그인 정보를 바탕으로 데이터 생성 시 자동으로 UserID를 가져옴<br/>
 
 **✔ Hospital 광고 API**
-
-메인 화면에 답변 작성이 우수한 병원들을 광고하고 있습니다.<br/>
-현재는 답변에 대한 Rank 알고리즘이 없어 ChatGPT를 제외한 병원 리스트를 랜덤하게 보여주고 있습니다. <br/><br/>
+- 메인 화면에 답변 작성이 우수한 병원 광고.<br/>
+- Rank 알고리즘이 없어 ChatGPT를 제외한 병원 리스트 랜덤하게 표기 <br/><br/>
 
 
 ### ✅ Picture API
-- 환부 사진과 그에 대한 AI 진단 결과를 등록 및 조회하는 Picture API 구현.<br/>
+- 환부 사진과 그에 대한 AI 진단 결과를 등록 및 조회 Picture API<br/>
 - Picture 테이블은 User 테이블, Pet 테이블과 외래키로 연결.<br/>
-- 환부 사진 등록 시 PetID 를 통해 자신의 반려견을 등록하고 및 자신의 반려견 별로 결과를 조회 할수 있도록 구현.<br/>
-- permission_classes 를 통해 작성자 외에 쓰기, 수정, 삭제 못하도록 권한 제한<br/><br/>
+- 환부 사진 등록 시 PetID 를 통해 자신의 반려견을 등록 및 자신의 반려견 별로 결과를 조회<br/>
+- permission_classes 로 작성자 외에 CUD 못하도록 권한 제한<br/><br/>
 
 ### ✅ Question API
-- 진단 결과에 대한 추가적인 상담글을 등록할 수 있도록 Question API 를 구현.<br/>
+- 진단 결과에 대한 추가적인 상담글을 등록하는 Question API.<br/>
 - Question 테이블은 User 테이블, Picture 테이블과 외래키로 연결.<br/>
-- permission_classes 를 통해 쓰기, 수정, 삭제 기능은 유저 본인만 가능하도록 권한을 제한.<br/>
+- permission_classes 로 CUD는 유저 본인만 가능하도록 권한 제한<br/>
 
 **✔ 비동기적 gpt 답변 등록**
 
-- Question 등록 시, 질문 내용을 기반으로 Chatgpt 답변이 자동으로 생성합니다.<br/>
-- ChatGPT 응답은 openai_api 사용했습니다.<br/>
-- 10 초 이상의 지연시간을 줄이기 위해 자동 답변 생성 과정은 쓰레드를 통해 비동기적으로 구현했습니다.<br/>
+- Question 등록 시, 질문 내용 기반으로 Chatgpt 답변 생성 (openai_api 기반) <br/>
+- threading module을 통한 최적화: 10초 이상의 자동 답변 생성 지연 시간 감소
 
 **✔ 답변 갯수 조회**
 
-Serializer 집계 함수를 통해 질문별 답변 갯수를 조회하도록 조회했습니다.<br/>
+Serializer 집계 함수 답변 갯수를 조회<br/>
 
 **✔ Pagenation 적용**
 
-PageNumberPagination을 상속받아 기본적인 Pagenation을 적용했습니다.<br/>
+PageNumberPagination 기반 기본적인 Pagenation을 적용<br/>
 
 **✔ 검색 기능 적용**
 
-제목과 내용을 기반으로 검색할 수 있도록 구현했습니다.<br/><br/>
+제목과 내용을 기반 검색<br/><br/>
 
 
 ### ✅ Answer API
-- 상담글에 대한 수의사와 ChatGpt의 답변을 받을 수 있도록 Answer API 를 구현<br/>
+- 상담글에 대한 수의사와 ChatGpt의 답변을 받는 Answer API 구현<br/>
 - Answer 테이블은 User, Question 테이블과 외래키로 연결.<br/>
-- '질문에 대한 답변' 이라는 성격에 맞게 API path를 "question/<questionid>/answer" 로 설정. <br/>
-- 수의사일 경우에만 답변을 달 수 있도록 권한 제한.<br/><br/>
+- '질문에 대한 답변' 이라는 성격에 맞게 API path를 "question/<questionid>/answer" 로 설정<br/>
+- 수의사일 경우에만 답변을 달 수 있도록 권한 제한<br/><br/>
 
 ### ✅ AWS 서버 배포
-- AWS 서버 배포는 uwsgi와 Nginx를 통해 배포.
-- Nginx 배포 시, AI모델이 돌아가면서 동시에 다른 API 요청이 들어오면 서버가 다운되는 문제 발생
-- uwsgi 서버 부하 관련 설정을 변경하여 서버가 안정적으로 돌아갈 수 있도록 했습니다.
+- uwsgi와 Nginx를 통해 배포
+- Nginx 배포 시, AI모델이 돌아가면서 동시에 다른 API 요청이 들어오면 서버가 다운되는 문제 발생 > uwsgi 서버 부하 관련 설정을 변경
 <br/><br/>
 
 <!--
@@ -173,7 +166,7 @@ PageNumberPagination을 상속받아 기본적인 Pagenation을 적용했습니�
 -->
 
 ### ✅ AI
-- 무증상 및 6가지의 피부 질환을 포함하여 7 Class로 분류
+- 무증상 및 6가지의 피부 질환을 포함 7 Class 분류
 
 ![ppt4](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/124108688/50c97e0d-654f-4874-816f-b8a67f0dee26)
 
@@ -181,13 +174,13 @@ PageNumberPagination을 상속받아 기본적인 Pagenation을 적용했습니�
 ✔️ **데이터**  
 [AI HUB 반려동물 피부 질환 데이터](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=561)를 사용했습니다.  
 ~~AI HUB 데이터에서 무증상 데이터를 제공하지 않고 있어 **DALLE API**를 사용해 ***무증상 데이터를 생성***하여 학습을 진행했습니다.~~  
-- 뒤늦게 반려동물 무증상 데이터가 AI HUB에 업데이트되었고 이를 6월 23일에 확인하여 이후 해당 데이터로 학습을 진행하였습니다.
-- 모델의 성능이 좋지 않아 데이터를 확인해본 결과, 중복되는 데이터가 여러 클래스에 들어가있고 개수를 채우기 위해 같은 이미지가 반복되는 등의 문제를 확인했습니다.
-- 중복되는 데이터를 삭제하고 각 피부 질환의 특질에 따라 데이터를 직접 분류하는 정제 과정을 거쳤습니다.
+- 뒤늦게 반려동물 무증상 데이터가 AI HUB에 업데이트되었고 이를 6월 23일에 확인 후 해당 데이터로 학습
+- 모델의 성능이 좋지 않아 데이터를 확인해본 결과, 중복되는 데이터가 여러 클래스에 들어가있고 개수를 채우기 위해 같은 이미지가 반복되는 등의 문제를 확인
+- 중복되는 데이터를 삭제하고 각 피부 질환의 특질에 따라 데이터를 직접 분류하는 정제 과정을 거침
 
 
 ✔️ **모델**  
-모델은 pretrained InceptionV3를 사용했습니다.<br>
+모델은 pretrained InceptionV3를 사용.<br>
 
 
 **✔ 모델 선정과정**
@@ -195,9 +188,8 @@ PageNumberPagination을 상속받아 기본적인 Pagenation을 적용했습니�
 
 ![ppt3](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/124108688/bdca5b23-8c5f-4a9c-9c15-505effc30062)
 
-
-마스킹 이미지가 작은 경우 환부로 인식하기 어려운 문제가 있었습니다.<br>
-unet에서는 픽셀 주위의 local region(패치)를 입력으로 각 픽셀의 label을 예측하는데, 패치가 작아 환부에 대한 localization 성능은 향상되었으나(98.81%의 accuracy), 네트워크는 매우 작은 context만 보게 되어 context 파악 성능이 매우 떨어지는 것을 확인할 수 있었습니다. <br>
+마스킹 이미지가 작은 경우 환부로 인식하기 어려운 문제 발생<br>
+unet에서는 픽셀 주위의 local region(패치)를 입력으로 각 픽셀의 label을 예측하는데, 패치가 작아 환부에 대한 localization 성능은 향상되었으나(98.81%의 accuracy), 네트워크는 매우 작은 context만 보게 되어 context 파악 성능이 매우 떨어지는 것을 확인 <br>
 (Unet의 경우 localization accuracy와 context(sementaic information) 사이는 trade off 관계)
 
 
@@ -206,8 +198,8 @@ unet에서는 픽셀 주위의 local region(패치)를 입력으로 각 픽셀�
 
 ![ppt7](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/124108688/10d68a2b-7670-4d6b-b229-661c915dbe29)
 
-마찬가지로 바운딩 박스가 작은 경우 객체 인식 자체를 잘 못하는 문제가 있었습니다.<br>
-데이터 특성상 세그멘테이션 모델보다는 환부 주변 부위까지 함께 고려하는 분류 모델이 적합​하다고 판단했습니다.
+마찬가지로 바운딩 박스가 작은 경우 객체 인식 자체를 잘 못하는 문제<br>
+데이터 특성상 세그멘테이션 모델보다는 환부 주변 부위까지 함께 고려하는 분류 모델이 적합​하다고 판단
 
 
 - 사전학습 분류모델 검토
@@ -215,22 +207,22 @@ unet에서는 픽셀 주위의 local region(패치)를 입력으로 각 픽셀�
 VGG16, MobileNetV3, EfficientNet-B0, Resnet-50, InceptionV3, Inception-resnetV2모델을 검토하였습니다.<br>
 ![ppt8](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/124108688/32346055-04b9-4afb-a377-f5b620610f2a)
 
-InceptionV3, Inception-resnetV2의 성능이 가장 좋은 것을 확인하였습니다.<br>
-모바일 환경을 고려하여 좀 더 가벼운 모델인 InceptionV3로 최종 결정하였습니다.<br>
+InceptionV3, Inception-resnetV2의 성능이 가장 좋은 것을 확인.<br>
+모바일 환경을 고려하여 좀 더 가벼운 모델인 InceptionV3로 최종 결정<br>
 
 
 **✔ 고도화 및 최적화**
 
 - 고도화
 
-데이터셋 정제과정을 거치다보니 줄어든 데이터를 보강하기위해 Data augmentation기법을 활용하였습니다.<br>
-모델 학습속도를 높이고 과적합를 방지하기 위해 213layer까지 동결하되 Batchnormalization layer는 동결하지 않았습니다.<br>
+데이터셋 정제과정을 거치다보니 줄어든 데이터를 보강하기위해 Data augmentation기법을 활용.<br>
+모델 학습속도를 높이고 과적합를 방지하기 위해 213layer까지 동결하되 Batchnormalization layer는 동결하지 않았음<br>
 
 - 최적화
 
-기존의 313layer중 layer갯수를 줄여가면서 성능변화를 확인하였습니다.<br>
-256layer까지는 밑단을 삭제하여도 유사한 성능을 내는 것을 확인하였습니다.<br>
-이를 채택한 결과 기존의 Parameter기준 약 42% 경량화했습니다.(2219만-->1278만)<br>
+기존의 313layer중 layer갯수를 줄여가면서 성능변화를 확인<br>
+256layer까지는 밑단을 삭제하여도 유사한 성능을 내는 것을 확인<br>
+이를 채택한 결과 기존의 Parameter기준 약 42% 경량화 (2219만-->1278만)<br>
 
 ![ppt11](https://github.com/AIVLE-School-Third-Big-Project/Team11-Project/assets/124108688/c7d81b7b-db1d-476b-be63-fbc7fa564a0a)
 
